@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>STREAMING FIGHT - A Arena Definitiva das Lutas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STREAMING FIGHT - Plataforma de streaming de lutas ao vivo e gravadas. MMA, Boxe, Jiu-Jitsu, Muay Thai e mais. Assista aos melhores lutadores do Brasil e do mundo.">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-glove"></div>
+      <h2>STREAMING FIGHT</h2>
+      <div class="preloader-bar">
+        <div class="preloader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-icon"><i class="bi bi-controller"></i></span>
+        <span class="logo-text">STREAMING<span class="logo-accent">FIGHT</span></span>
+      </a>
+      
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Inicio</a></li>
+          <li><a href="#lutas" class="nav-link">Lutas</a></li>
+          <li><a href="#lutadores" class="nav-link">Lutadores</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
+          <li><a href="#planos" class="nav-link">Planos</a></li>
+          <li><a href="#eventos" class="nav-link">Eventos</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-login">Entrar</button>
+        <button class="btn-assinar">Assine Agora</button>
+      </div>
+
+      <button class="mobile-menu" id="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="bi bi-fire"></i> AO VIVO AGORA
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-line">A ARENA</span>
+        <span class="hero-title-line hero-title-accent">DEFINITIVA</span>
+        <span class="hero-title-line">DAS LUTAS</span>
+      </h1>
+      <p class="hero-description">
+        Assista aos maiores eventos de MMA, Boxe, Jiu-Jitsu e Muay Thai ao vivo e sob demanda. 
+        Sinta a adrenalina de cada golpe na sua tela.
+      </p>
+      <div class="hero-cta">
+        <a href="#planos" class="btn btn-primary btn-glow">
+          <i class="bi bi-play-fill"></i> Comece Agora
+        </a>
+        <a href="#videos" class="btn btn-secondary">
+          <i class="bi bi-film"></i> Assistir Trailer
+        </a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number" data-count="500">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Lutas Disponiveis</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="60">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Canais ao Vivo</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="100">0</span><span class="stat-suffix">K+</span>
+          <span class="stat-label">Assinantes Ativos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <a href="#lutas">
+        <i class="bi bi-chevron-double-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Modalidades Section -->
+  <section class="modalidades" id="lutas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Modalidades</span>
+        <h2 class="section-title">Escolha sua <span class="accent">Arena</span></h2>
+        <p class="section-subtitle">Do octogono ao tatame, temos todas as modalidades de luta</p>
+      </div>
+
+      <div class="modalidades-grid">
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-hand-thumbs-up"></i>
+          </div>
+          <h3>MMA</h3>
+          <p>Mixed Martial Arts - A arte marcial mais completa do mundo. UFC, Bellator, PFL e muito mais.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 200+ Lutas</span>
+          </div>
+        </div>
+
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-emoji-angry"></i>
+          </div>
+          <h3>BOXE</h3>
+          <p>O nobre esporte dos punhos. Canelo, Fury, Usyk e os melhores boxeadores do planeta.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 150+ Lutas</span>
+          </div>
+        </div>
+
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-people"></i>
+          </div>
+          <h3>JIU-JITSU</h3>
+          <p>A arte suave brasileira. ADCC, IBJJF, e os melhores lutadores de grappling do mundo.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 100+ Lutas</span>
+          </div>
+        </div>
+
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-lightning"></i>
+          </div>
+          <h3>MUAY THAI</h3>
+          <p>Os oito membros. strikes devastadores e clinch mortifero. ONE Championship e Lumpinee.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 80+ Lutas</span>
+          </div>
+        </div>
+
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-trophy"></i>
+          </div>
+          <h3>KARATE</h3>
+          <p>Tradição e disciplina. Karate 1 Premier League e os melhores katakas e kumites do mundo.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 50+ Lutas</span>
+          </div>
+        </div>
+
+        <div class="modalidade-card" data-tilt>
+          <div class="modalidade-icon">
+            <i class="bi bi-shield"></i>
+          </div>
+          <h3>LUTA LIVRE</h3>
+          <p>O wrestling brasileiro. Combates intensos e strategia no chao e em pe.</p>
+          <div class="modalidade-stats">
+            <span><i class="bi bi-camera-video"></i> 40+ Lutas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lutadores Brasileiros Section -->
+  <section class="lutadores" id="lutadores">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lendas Brasileiras</span>
+        <h2 class="section-title">Nossos <span class="accent">Guerreiros</span></h2>
+        <p class="section-subtitle">Conheca os maiores lutadores que o Brasil ja produziu</p>
+      </div>
+
+      <div class="lutadores-grid">
+        <!-- Charles Oliveira -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/charles-oliveira.jpg" alt="Charles Oliveira" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Charles+Oliveira'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">34</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">9</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">CAMPEAO</div>
+            <h3 class="lutador-nome">Charles "do Bronx" Oliveira</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> Guarujá, São Paulo</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">72%</span>
+                <span class="stat-name">Finalizacoes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">11</span>
+                <span class="stat-name">Defesas de Cinturao</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">16</span>
+                <span class="stat-name">NOCs</span>
+              </div>
+            </div>
+            <p class="lutador-bio">O maior finalizador da historia do UFC. 16 vitorias por finalizacao, record absoluto na organizacao. Ex-campeao peso leve do UFC.</p>
+          </div>
+        </div>
+
+        <!-- Amanda Nunes -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/amanda-nunes.jpg" alt="Amanda Nunes" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Amanda+Nunes'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">22</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">4</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">LENDA</div>
+            <h3 class="lutador-nome">Amanda "The Lioness" Nunes</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> Salvador, Bahia</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">68%</span>
+                <span class="stat-name">KO/TKO</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">2x</span>
+                <span class="stat-name">Double Champ</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">12</span>
+                <span class="stat-name">Defesas</span>
+              </div>
+            </div>
+            <p class="lutador-bio">A maior lutadora de MMA de todos os tempos. Unica lutadora a defender dois cinturaos simultaneamente no UFC (Pena e Galo Feminino).</p>
+          </div>
+        </div>
+
+        <!-- Alex Pereira -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/alex-pereira.jpg" alt="Alex Pereira" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Alex+Pereira'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">12</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">PODATAN</div>
+            <h3 class="lutador-nome">Alex "Poatan" Pereira</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> São Paulo, SP</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">75%</span>
+                <span class="stat-name">KO/TKO</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">3x</span>
+                <span class="stat-name">Campeao GLORY</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">2</span>
+                <span class="stat-name">Cinturaos UFC</span>
+              </div>
+            </div>
+            <p class="lutador-bio">O "Poatan" - Maos de Pedra. Campeao peso meio-pesado e pesado do UFC. Ex-campeao mundial de kickboxing pelo GLORY.</p>
+          </div>
+        </div>
+
+        <!-- Charles do Bronx -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/antonio-rodrigo-nogueira.jpg" alt="Minotauro" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Minotauro'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">34</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">10</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">LENDA</div>
+            <h3 class="lutador-nome">Antônio "Minotauro" Nogueira</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> Bahia, BA</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">44%</span>
+                <span class="stat-name">Finalizacoes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">PRIDE</span>
+                <span class="stat-name">Ex-Campeao</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">2</span>
+                <span class="stat-name">Cinturaos</span>
+              </div>
+            </div>
+            <p class="lutador-bio">Lenda viva do MMA. Ex-campeao peso pesado do PRIDE e do UFC. Conhecido por suas finalizacoes espetaculares e fibra de titanio.</p>
+          </div>
+        </div>
+
+        <!-- Fabricio Werdum -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/fabricio-werdum.jpg" alt="Vai Cavalo" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Werdum'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">24</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">9</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">CAMPEAO</div>
+            <h3 class="lutador-nome">Fabricio "Vai Cavalo" Werdum</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> Porto Alegre, RS</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">46%</span>
+                <span class="stat-name">Finalizacoes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">ADCC</span>
+                <span class="stat-name">Campeao</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">1</span>
+                <span class="stat-name">Cinturao UFC</span>
+              </div>
+            </div>
+            <p class="lutador-bio">Ex-campeao peso pesado do UFC e do Strikeforce. Lenda do Jiu-Jitsu com cinturao preto e medalha de ouro no ADCC.</p>
+          </div>
+        </div>
+
+        <!-- Demian Maia -->
+        <div class="lutador-card">
+          <div class="lutador-img">
+            <img src="https://ufc-images.s3.amazonaws.com/athlete/head-shot/demian-maia.jpg" alt="Demian Maia" onerror="this.src='https://via.placeholder.com/400x500/1a1a2e/ff4444?text=Demian+Maia'">
+            <div class="lutador-overlay">
+              <div class="lutador-record">
+                <span class="record-wins">28</span>
+                <span class="record-separator">-</span>
+                <span class="record-losses">11</span>
+              </div>
+            </div>
+          </div>
+          <div class="lutador-info">
+            <div class="lutador-badge">MESTRE</div>
+            <h3 class="lutador-nome">Demian Maia</h3>
+            <p class="lutador-origem"><i class="bi bi-geo-alt"></i> São Paulo, SP</p>
+            <div class="lutador-stats">
+              <div class="stat-item">
+                <span class="stat-value">60%</span>
+                <span class="stat-name">Finalizacoes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">7</span>
+                <span class="stat-name">Attempts R1</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">IBJJF</span>
+                <span class="stat-name">Mundialista</span>
+              </div>
+            </div>
+            <p class="lutador-bio">O "Mestre do Jiu-Jitsu". 7 tentativas de cinturao do UFC. Considerado um dos melhores grapplers da historia do MMA.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lutadores-cta">
+        <a href="#" class="btn btn-primary">
+          <i class="bi bi-trophy"></i> Ver Todos os Lutadores
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section class="videos-section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Highlights</span>
+        <h2 class="section-title">Melhores <span class="accent">Momentos</span></h2>
+        <p class="section-subtitle">Reviva as lutas mais epicas da historia</p>
+      </div>
+
+      <div class="videos-grid">
+        <div class="video-card video-card-featured">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/QYxhmVBhnbI" title="Charles Oliveira vs Justin Gaethje" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">MMA</span>
+            <h3>Charles Oliveira vs Justin Gaethje - UFC 274</h3>
+            <p>O "do Bronx" conquista o cinturao lightweight com uma finalizacao epica em plenoufa.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/kHfL0fR8wQs" title="Amanda Nunes vs Cris Cyborg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">MMA</span>
+            <h3>Amanda Nunes vs Cris Cyborg - UFC 232</h3>
+            <p>51 segundos. Amanda Nunes se torna a primeira dupla campeã da historia do UFC.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/1aHu-LIx4mE" title="Alex Pereira vs Israel Adesanya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">MMA</span>
+            <h3>Alex Pereira vs Israel Adesanya 3 - UFC 287</h3>
+            <p>O "Poatan" encerra a trilogia com knockout espetacular contra o maior striking do MMA.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/0D3mTzIFy1M" title="Minotauro Nogueira" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">MMA</span>
+            <h3>Minotauro - Melhores Momentos</h3>
+            <p>Compilation das melhores finalizacoes e vitorias da lenda brasileira.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/1_gNMvE2Z8s" title="Jiu-Jitsu Brasileiro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">BJJ</span>
+            <h3>Jiu-Jitsu Brasileiro - Historia e Legado</h3>
+            <p>A arte suave que conquistou o mundo. Gracie family e a evolução do grappling.</p>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/6KBZ9F-e8eE" title="Muay Thai Brasileiro" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <span class="video-tag">MUAY THAI</span>
+            <h3>Muay Thai Brasileiro no Palcos Mundiais</h3>
+            <p>Atletas brasileiros dominando o Muay Thai internacional.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Planos Section -->
+  <section class="planos-section" id="planos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Assinatura</span>
+        <h2 class="section-title">Escolha seu <span class="accent">Plano</span></h2>
+        <p class="section-subtitle">Acesse o melhor conteudo de lutas do Brasil</p>
+      </div>
+
+      <div class="planos-grid">
+        <!-- Plano Basico -->
+        <div class="plano-card">
+          <div class="plano-header">
+            <span class="plano-icon"><i class="bi bi-play-circle"></i></span>
+            <h3 class="plano-nome">Basico</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span>
+              <span class="valor">19,90</span>
+              <span class="periodo">/mes</span>
+            </div>
+          </div>
+          <ul class="plano-features">
+            <li><i class="bi bi-check-circle-fill"></i> Canais ao vivo com propagandas</li>
+            <li><i class="bi bi-check-circle-fill"></i> 15+ canais de luta</li>
+            <li><i class="bi bi-check-circle-fill"></i> 1 usuario por vez</li>
+            <li><i class="bi bi-check-circle-fill"></i> Qualidade HD</li>
+            <li class="disabled"><i class="bi bi-x-circle"></i> Filmes e documentarios</li>
+            <li class="disabled"><i class="bi bi-x-circle"></i> Downloads offline</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Assinar Agora</a>
+        </div>
+
+        <!-- Plano Intermediario -->
+        <div class="plano-card plano-destaque">
+          <div class="plano-badge">MAIS POPULAR</div>
+          <div class="plano-header">
+            <span class="plano-icon"><i class="bi bi-star-fill"></i></span>
+            <h3 class="plano-nome">Premium</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span>
+              <span class="valor">49,90</span>
+              <span class="periodo">/mes</span>
+            </div>
+          </div>
+          <ul class="plano-features">
+            <li><i class="bi bi-check-circle-fill"></i> Sem propagandas</li>
+            <li><i class="bi bi-check-circle-fill"></i> 30+ canais de luta</li>
+            <li><i class="bi bi-check-circle-fill"></i> 45+ filmes e documentarios</li>
+            <li><i class="bi bi-check-circle-fill"></i> Ate 3 usuarios simultaneos</li>
+            <li><i class="bi bi-check-circle-fill"></i> Qualidade Full HD</li>
+            <li><i class="bi bi-check-circle-fill"></i> Downloads offline</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-glow">Assinar Agora</a>
+        </div>
+
+        <!-- Plano Diamante -->
+        <div class="plano-card">
+          <div class="plano-header">
+            <span class="plano-icon"><i class="bi bi-gem"></i></span>
+            <h3 class="plano-nome">Diamante</h3>
+            <div class="plano-preco">
+              <span class="moeda">R$</span>
+              <span class="valor">79,90</span>
+              <span class="periodo">/mes</span>
+            </div>
+          </div>
+          <ul class="plano-features">
+            <li><i class="bi bi-check-circle-fill"></i> Sem propagandas</li>
+            <li><i class="bi bi-check-circle-fill"></i> Catalogo completo de canais</li>
+            <li><i class="bi bi-check-circle-fill"></i> Catalogo completo de filmes</li>
+            <li><i class="bi bi-check-circle-fill"></i> Ate 6 usuarios simultaneos</li>
+            <li><i class="bi bi-check-circle-fill"></i> Qualidade 4K Ultra HD</li>
+            <li><i class="bi bi-check-circle-fill"></i> Suporte 24/7 prioritario</li>
+          </ul>
+          <a href="#" class="btn btn-outline">Assinar Agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proximos Eventos -->
+  <section class="eventos-section" id="eventos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Calendario</span>
+        <h2 class="section-title">Proximos <span class="accent">Eventos</span></h2>
+        <p class="section-subtitle">Nao perca nenhuma luta importante</p>
+      </div>
+
+      <div class="eventos-timeline">
+        <div class="evento-item">
+          <div class="evento-data">
+            <span class="evento-dia">14</span>
+            <span class="evento-mes">SET</span>
+          </div>
+          <div class="evento-conteudo">
+            <span class="evento-tag evento-tag-ufc">UFC 307</span>
+            <h3>Alex Pereira vs Khalil Rountree Jr.</h3>
+            <p><i class="bi bi-geo-alt"></i> Salt Lake City, EUA</p>
+            <p><i class="bi bi-clock"></i> 22:00 (horario de Brasilia)</p>
+            <div class="evento-cta">
+              <a href="#" class="btn btn-small btn-primary">Configure Lembrete</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="evento-item">
+          <div class="evento-data">
+            <span class="evento-dia">21</span>
+            <span class="evento-mes">SET</span>
+          </div>
+          <div class="evento-conteudo">
+            <span class="evento-tag evento-tag-ufc">UFC 308</span>
+            <h3>Ilia Topuria vs Max Holloway</h3>
+            <p><i class="bi bi-geo-alt"></i> Abu Dhabi, UAE</p>
+            <p><i class="bi bi-clock"></i> 17:00 (horario de Brasilia)</p>
+            <div class="evento-cta">
+              <a href="#" class="btn btn-small btn-primary">Configure Lembrete</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="evento-item">
+          <div class="evento-data">
+            <span class="evento-dia">05</span>
+            <span class="evento-mes">OUT</span>
+          </div>
+          <div class="evento-conteudo">
+            <span class="evento-tag evento-tag-bjj">ADCC Worlds</span>
+            <h3>Campeonato Mundial de ADCC</h3>
+            <p><i class="bi bi-geo-alt"></i> Las Vegas, EUA</p>
+            <p><i class="bi bi-clock"></i> 14:00 (horario de Brasilia)</p>
+            <div class="evento-cta">
+              <a href="#" class="btn btn-small btn-primary">Configure Lembrete</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="evento-item">
+          <div class="evento-data">
+            <span class="evento-dia">26</span>
+            <span class="evento-mes">OUT</span>
+          </div>
+          <div class="evento-conteudo">
+            <span class="evento-tag evento-tag-boxe">Boxe</span>
+            <h3>Canelo Alvarez vs Edgar Berlanga</h3>
+            <p><i class="bi bi-geo-alt"></i> Las Vegas, EUA</p>
+            <p><i class="bi bi-clock"></i> 01:00 (horario de Brasilia)</p>
+            <div class="evento-cta">
+              <a href="#" class="btn btn-small btn-primary">Configure Lembrete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Section -->
+  <section class="diferenciais-section">
+    <div class="container">
+      <div class="diferenciais-grid">
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <i class="bi bi-hdmi"></i>
+          </div>
+          <h3>Qualidade 4K</h3>
+          <p>Assista em resolucao 4K com audio Dolby Atmos. Cada detalhe da luta na sua tela.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <i class="bi bi-phone"></i>
+          </div>
+          <h3>Multi-plataforma</h3>
+          <p>Android, iOS, Smart TV, Web e mais. Assista de qualquer lugar, a qualquer hora.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <i class="bi bi-clock-history"></i>
+          </div>
+          <h3>100% ao Vivo</h3>
+          <p>Todos os eventos ao vivo e sob demanda. Nao perca nenhum momento.</p>
+        </div>
+
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <i class="bi bi-headset"></i>
+          </div>
+          <h3>Suporte 24/7</h3>
+          <p>Nossa equipe esta sempre pronta para ajudar. Suporte em portugues 24 horas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section class="contato-section" id="contato">
+    <div class="container">
+      <div class="contato-wrapper">
+        <div class="contato-info">
+          <span class="section-tag">Contato</span>
+          <h2 class="section-title">Fale <span class="accent">Conosco</span></h2>
+          <p>Tem alguma duvida? Nossa equipe esta pronta para ajudar.</p>
+          
+          <div class="contato-dados">
+            <div class="contato-dado">
+              <i class="bi bi-envelope"></i>
+              <span>contato@streamingfight.com.br</span>
+            </div>
+            <div class="contato-dado">
+              <i class="bi bi-telephone"></i>
+              <span>(11) 4235-6432</span>
+            </div>
+            <div class="contato-dado">
+              <i class="bi bi-geo-alt"></i>
+              <span>São Paulo, SP - Brasil</span>
+            </div>
+          </div>
+
+          <div class="contato-social">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <form class="contato-form">
+          <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" placeholder="(11) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label>Assunto</label>
+            <select required>
+              <option value="">Selecione...</option>
+              <option>Duvida sobre plano</option>
+              <option>Suporte tecnico</option>
+              <option>Sugestao</option>
+              <option>Parceria</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensagem</label>
+            <textarea rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="bi bi-send"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon"><i class="bi bi-controller"></i></span>
+            <span class="logo-text">STREAMING<span class="logo-accent">FIGHT</span></span>
+          </a>
+          <p>A arena definitiva das lutas. Assista aos melhores eventos de MMA, Boxe, Jiu-Jitsu e Muay Thai ao vivo e sob demanda.</p>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Links Rapidos</h4>
+          <ul>
+            <li><a href="#lutas">Modalidades</a></li>
+            <li><a href="#lutadores">Lutadores</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#planos">Planos</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="#">Como Assinar</a></li>
+            <li><a href="#">Dispositivos Compatíveis</a></li>
+            <li><a href="#">Politica de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Receba Novidades</h4>
+          <p>Fique por dentro das ultimas lutas e promocoes.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Seu email">
+            <button type="submit"><i class="bi bi-send"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 STREAMING FIGHT. Todos os direitos reservados.</p>
+        <div class="footer-payments">
+          <i class="bi bi-credit-card"></i>
+          <i class="bi bi-paypal"></i>
+          <i class="bi bi-apple"></i>
+          <i class="bi bi-google-play"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#hero" class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

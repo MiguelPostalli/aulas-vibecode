@@ -1,0 +1,81 @@
+-- Creación de la estructura de la base de datos
+CREATE TABLE public.cursos (
+    codigo_curso SERIAL PRIMARY KEY,
+    nombre_curso VARCHAR(100),
+    ciclo INTEGER CHECK (ciclo IN (1, 2)), -- Primer o segundo ciclo
+    grupo VARCHAR(10),
+    creditos INTEGER,
+    horas_teoria INTEGER,
+    horas_practica INTEGER,
+    vacantes INTEGER,
+    prerequisito INTEGER REFERENCES public.cursos (codigo_curso) ON DELETE SET NULL
+);
+
+CREATE TABLE public.estudiantes (
+    codigo_estudiante VARCHAR(100) PRIMARY KEY,
+    nombre_completo VARCHAR(100),
+    genero CHAR(1) CHECK (genero IN ('M', 'F'))
+);
+
+CREATE TABLE public.matriculas (
+    codigo_estudiante VARCHAR(100),
+    codigo_curso INTEGER,
+    fecha_matricula DATE,
+    PRIMARY KEY (codigo_estudiante, codigo_curso),
+    FOREIGN KEY (codigo_estudiante) REFERENCES public.estudiantes (codigo_estudiante) ON DELETE CASCADE,
+    FOREIGN KEY (codigo_curso) REFERENCES public.cursos (codigo_curso) ON DELETE CASCADE
+);
+
+------------------------------------------------
+
+-- Inserts para la tabla cursos
+-- Cursos del primer ciclo (sin prerequisitos)
+INSERT INTO public.cursos (nombre_curso, ciclo, grupo, creditos, horas_teoria, horas_practica, vacantes, prerequisito) 
+VALUES 
+    ('Introducción a la Programación', 1, 'A', 4, 3, 2, 30, NULL),
+    ('Matemáticas Básicas', 1, 'A', 3, 2, 1, 30, NULL),
+    ('Fundamentos de Física', 1, 'B', 4, 3, 2, 25, NULL),
+    ('Introducción a la Química', 1, 'A', 4, 3, 2, 20, NULL),
+    ('Comunicación Oral y Escrita', 1, 'B', 2, 2, 1, 35, NULL);
+
+-- Cursos del segundo ciclo (algunos con prerequisitos del primer ciclo)
+INSERT INTO public.cursos (nombre_curso, ciclo, grupo, creditos, horas_teoria, horas_practica, vacantes, prerequisito) 
+VALUES 
+    ('Estructuras Discretas', 2, 'A', 4, 3, 2, 25, 2), -- Prerequisito: Matemáticas Básicas
+    ('Programación Orientada a Objetos', 2, 'B', 5, 4, 3, 20, 1), -- Prerequisito: Introducción a la Programación
+    ('Química General Avanzada', 2, 'A', 4, 3, 2, 15, 4), -- Prerequisito: Introducción a la Química
+    ('Cálculo Diferencial', 2, 'C', 4, 3, 2, 30, NULL),
+    ('Historia de la Ciencia', 2, 'B', 3, 2, 1, 40, NULL);
+
+------------------------------------------------
+
+-- Inserts para la tabla estudiantes
+INSERT INTO public.estudiantes (codigo_estudiante, nombre_completo, genero) 
+VALUES 
+    ('EST001', 'Juan Pérez', 'M'),
+    ('EST002', 'María González', 'F'),
+    ('EST003', 'Carlos Ramírez', 'M'),
+    ('EST004', 'Ana Torres', 'F'),
+    ('EST005', 'Luis Martínez', 'M'),
+    ('EST006', 'José Fernández', 'M'),
+    ('EST007', 'Laura Espinoza', 'F'),
+    ('EST008', 'Pedro Castillo', 'M'),
+    ('EST009', 'Sofía Morales', 'F'),
+    ('EST010', 'Andrés López', 'M');
+
+------------------------------------------------
+
+-- Inserts para la tabla matrículas
+INSERT INTO public.matriculas (codigo_estudiante, codigo_curso, fecha_matricula)
+VALUES 
+    ('EST001', 1, '2023-01-15'), -- Juan Pérez matriculado en Introducción a la Programación
+    ('EST002', 2, '2023-01-15'), -- María González matriculada en Matemáticas Básicas
+    ('EST003', 3, '2023-01-16'), -- Carlos Ramírez matriculado en Fundamentos de Física
+    ('EST004', 4, '2023-01-17'), -- Ana Torres matriculada en Introducción a la Química
+    ('EST005', 5, '2023-01-18'), -- Luis Martínez matriculado en Comunicación Oral y Escrita
+    ('EST006', 6, '2023-02-01'), -- José Fernández matriculado en Estructuras Discretas
+    ('EST007', 7, '2023-02-02'), -- Laura Espinoza matriculada en Programación Orientada a Objetos
+    ('EST008', 8, '2023-02-03'), -- Pedro Castillo matriculado en Química General Avanzada
+    ('EST009', 9, '2023-02-04'), -- Sofía Morales matriculada en Cálculo Diferencial
+    ('EST010', 10, '2023-02-05'); -- Andrés López matriculado en Historia de la Ciencia
+Well, its an online report which contains all the vital information about the vehicles such as its accidental record, theft record, recalls, ownership history, and much more details. You can obtain the IZ report from their site inspectzone.uk
